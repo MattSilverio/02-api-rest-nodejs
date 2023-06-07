@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "tsx watch src/server.ts",
     "knex": "node --no-warnings --loader tsx ./node_modules/knex/bin/cli.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "vitest",
+    "db:latest": "npm run knex migrate:latest",
+    "db:reset": "npm run knex migrate:rollback --all"
   },
   "keywords": [],
   "author": "",
@@ -21,7 +23,10 @@
   },
   "devDependencies": {
     "@types/node": "^18.15.5",
+    "@types/supertest": "^2.0.12",
+    "supertest": "^6.3.3",
     "tsx": "^3.12.6",
-    "typescript": "^5.0.2"
+    "typescript": "^5.0.2",
+    "vitest": "^0.30.1"
   }
 }
