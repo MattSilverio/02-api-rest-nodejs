@@ -1,6 +1,6 @@
 # Database
-db/app.db
-db/test.db
+db/*.db
+
 
 # Dependencies
 node_modules
